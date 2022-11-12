@@ -1,0 +1,63 @@
+.hidden {
+  display: none;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+:root {
+
+}
+
+.link {
+
+}
+
+/*nav*/
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.nav-links {    
+  margin: 0rem 0rem;
+}
+
+/*swiping*/
+.restnts-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.restnt {
+}
+.photo {
+  height: 600px;
+  width: 1000px;
+  object-fit: cover;
+}
+
+.left-swipe, .right-swipe {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  color: black;
+  font-weight: bold 4rem Arial;
+}
+.right-swipe {
+  right: -3rem;
+}
+.left-swipe {
+  left: -3rem;
+}
+
+.text {
+  color: black;
+  font: 2rem Arial;
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  text-align: center;
+}
