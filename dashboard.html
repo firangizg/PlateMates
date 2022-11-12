@@ -1,0 +1,59 @@
+<!doctype html>
+<html class="html" lang="en">
+
+  <head>
+    <title>PlateMates Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+
+  <body>
+    <div id="nav">
+      <nav class="nav">
+        <ul class="nav-links">
+          <p style="margin:0">
+            <a class="link" href="./dashboard.html">Dashboard</a>
+            <!---<a class="link" href="">Community Events</a>--->
+            <!---<a class="link" href="">Chat</a>--->
+            <a class="link" href="./settings.html">Settings</a>
+          </p>
+        </ul>
+      </nav>
+      <hr/>
+    </div>
+
+    <div class="restnts-container">
+      <div class="restnt">
+        <img src="./assets/oliveGarden.jpg" class="photo">
+      </div>
+    
+      <a class="left-swipe">No</a>
+      <a class="right-swipe" onclick="nextRestnt(1)" class="photo">Yes</a>
+    </div>
+
+    <script type="text/javascript">
+      let restntIndex = 1;
+      showRestnt(restntIndex);
+
+      function nextRestnt(n) {
+        showRestnt(restntIndex += n);
+      }
+
+      function currentRestnt(n) {
+        showRestnt(restntIndex = n);
+      }
+
+      function showRestnts(n) {
+        let i;
+        let restnts = document.getElementsByClassName("restnt");
+        if (n > restnts.length) {restntIndex = 1}    
+        if (n < 1) {restbtIndex = restnts.length}
+        for (i = 0; i < restnts.length; i++) {
+          restnts[i].style.display = "none";  
+        }
+        restnts[restntIndex-1].style.display = "block";  
+      }
+    </script>
+    
+  </body>
