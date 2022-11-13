@@ -1,63 +1,102 @@
-.hidden {
-  display: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-label {
-  margin-bottom: 10px;
-  display: block;
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
-:root {
-
-}
-
-.link {
-
-}
-
-/*nav*/
-.nav {
+body {
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: flex-end;
-}
-.nav-links {    
-  margin: 0rem 0rem;
+  background: linear-gradient(0deg, rgb(107, 148, 143), rgb(48, 137, 0)) no-repeat;
 }
 
-/*swiping*/
-.restnts-container {
-  max-width: 1000px;
+#swiper {
+  height: 70vh;
+  aspect-ratio: 2 / 3;
+  perspective: 1000px;
+  perspective-origin: center 50%;
+  transform-style: preserve-3d;
   position: relative;
-  margin: auto;
-}
-.restnt {
-}
-.photo {
-  height: 600px;
-  width: 1000px;
-  object-fit: cover;
 }
 
-.left-swipe, .right-swipe {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  color: black;
-  font-weight: bold 4rem Arial;
-}
-.right-swipe {
-  right: -3rem;
-}
-.left-swipe {
-  left: -3rem;
-}
-
-.text {
-  color: black;
-  font: 2rem Arial;
-  position: absolute;
-  bottom: 1rem;
+.card {
   width: 100%;
-  text-align: center;
+  height: 100%;
+  position: absolute;
+  border-radius: 20px;
+  overflow: hidden;
+  transform: translateZ(calc(-30px * var(--i))) translateY(calc(-20px * var(--i))) rotate(calc(-4deg * var(--i)));
+  filter: drop-shadow(2px 2px 20px rgba(0, 0, 0, 0.5));
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.5s;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+#like,
+#dislike {
+  font-size: 16vh;
+  border-radius: 50%;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  animation-name: animation1;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  /* don't run animation at the beginning */
+  animation-play-state: paused;
+}
+
+#like.trigger,
+#dislike.trigger {
+  animation-name: animation2;
+}
+
+#like {
+  color: red;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#dislike {
+  color: #ccc;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes animation1 {
+
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes animation2 {
+
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 1;
+  }
 }

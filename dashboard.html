@@ -1,59 +1,39 @@
-<!doctype html>
-<html class="html" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-  <head>
-    <title>PlateMates Dashboard</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="public/css/main.css">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Swiper</title>
+  <link rel="stylesheet" href="public/css/main.css">
+</head>
 
-  <body>
-    <div id="nav">
-      <nav class="nav">
-        <ul class="nav-links">
-          <p style="margin:0">
-            <a class="link" href="./dashboard.html">Dashboard</a>
-            <!---<a class="link" href="">Community Events</a>--->
-            <!---<a class="link" href="">Chat</a>--->
-            <a class="link" href="./settings.html">Settings</a>
-          </p>
-        </ul>
-      </nav>
-      <hr/>
+<body>
+  <ion-icon id="dislike" name="heart-dislike"></ion-icon>
+  <div id="swiper">
+    <!-- <div class="card" style="--i:0">
+      <img src="https://source.unsplash.com/random/1000x1000/?sky" alt="">
     </div>
-
-    <div class="restnts-container">
-      <div class="restnt">
-        <img src="./assets/oliveGarden.jpg" class="photo">
-      </div>
-    
-      <a class="left-swipe">No</a>
-      <a class="right-swipe" onclick="nextRestnt(1)" class="photo">Yes</a>
+    <div class="card" style="--i:1">
+      <img src="https://source.unsplash.com/random/1000x1000/?landscape" alt="">
     </div>
+    <div class="card" style="--i:2">
+      <img src="https://source.unsplash.com/random/1000x1000/?ocean" alt="">
+    </div>
+    <div class="card" style="--i:3">
+      <img src="https://source.unsplash.com/random/1000x1000/?moutain" alt="">
+    </div>
+    <div class="card" style="--i:4">
+      <img src="https://source.unsplash.com/random/1000x1000/?forest" alt="">
+    </div> -->
+  </div>
+  <ion-icon id="like" name="heart"></ion-icon>
+  
+  <script src="public/js/card.js"></script>
+  <script src="public/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
 
-    <script type="text/javascript">
-      let restntIndex = 1;
-      showRestnt(restntIndex);
-
-      function nextRestnt(n) {
-        showRestnt(restntIndex += n);
-      }
-
-      function currentRestnt(n) {
-        showRestnt(restntIndex = n);
-      }
-
-      function showRestnts(n) {
-        let i;
-        let restnts = document.getElementsByClassName("restnt");
-        if (n > restnts.length) {restntIndex = 1}    
-        if (n < 1) {restbtIndex = restnts.length}
-        for (i = 0; i < restnts.length; i++) {
-          restnts[i].style.display = "none";  
-        }
-        restnts[restntIndex-1].style.display = "block";  
-      }
-    </script>
-    
-  </body>
+</html>
