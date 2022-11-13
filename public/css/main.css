@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+/* Change the link color to #111 (black) on hover */
+
 html,
 body {
   width: 100vw;
@@ -12,12 +14,16 @@ body {
 }
 
 body {
-  display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background: linear-gradient(0deg, rgb(107, 148, 143), rgb(48, 137, 0)) no-repeat;
+  background: linear-gradient(0deg, rgb(150, 185, 181), rgb(118, 144, 103)) no-repeat;
 }
 
+.dashboard {
+  display: flex;
+}
+/*  */
+ 
 #swiper {
   height: 70vh;
   aspect-ratio: 2 / 3;
@@ -100,3 +106,5 @@ body {
     opacity: 1;
   }
 }
+
+
