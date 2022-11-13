@@ -107,4 +107,66 @@ body {
   }
 }
 
+li a {
+  margin: 0;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px 40px;
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
 
+li {
+  float: left;
+}
+
+li a:hover {
+  background-color: #111;
+} 
+
+.textbox {
+  color: whitesmoke;
+  font-family: arial;
+  padding: 10px;
+  margin: 10px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.flex-child {
+  flex: 1;
+}  
+
+.flex-child:first-child {
+  margin-right: 10px;
+} 
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  justify-content: space-evenly;
+  align-items: center;
+  background: linear-gradient(0deg, rgb(150, 185, 181), rgb(118, 144, 103)) no-repeat;
+}
+
+img {
+  margin: 20%;
+  position: relative;
+  margin-right: 2rem;
+}
