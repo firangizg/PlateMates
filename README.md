@@ -5,3 +5,5 @@ On PlateMates, users first create a profile with a few of their food preferences
 The Figma prototype [here](https://www.figma.com/file/CdR4F6RKYz5jdHpptHgmum/PlateMates?node-id=0%3A1) demonstrates the vision behind this project. 
 
 The short video [here](https://youtu.be/_G6a44CM8xc) shows one aspect of the app that could translate well to a web app. 
+
+Check out the demo [here](https://platemates-co.web.app/dashboard.html).
